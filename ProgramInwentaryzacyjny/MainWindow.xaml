@@ -7,26 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#C53783" Offset="1.0" />
+                <GradientStop Color="White" Offset="0.5" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <Grid Background="LightBlue">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >Menu</TextBlock>
-            <Button Grid.Column="0" Grid.Row="1" x:Name="Magazyn" Content="Magazyn" FontSize="20" FontWeight="Bold" Height="50" Margin="5" Click="Magazyn_Click"/>
-            <Button Grid.Column="0" Grid.Row="2" x:Name="Aktualizacja" Content="Aktualizacja" FontSize="20" FontWeight="Bold" Height="50" Margin="5"/>
-            <Button Grid.Column="0" Grid.Row="3" x:Name="Raport" Content="Raport" FontSize="20" FontWeight="Bold" Height="50" Margin="5"/>
-            <Button Grid.Column="0" Grid.Row="4" x:Name="Wyjście" Content="Wyjście" FontSize="20" FontWeight="Bold" Height="50" Margin="5" Click="Wyjście_Click"/>
-            <TextBlock Grid.Column="0" Grid.Row="5" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom">wersja 0.0.1</TextBlock>
-        </Grid>
+        <StackPanel Margin="10" Background="Gainsboro">
+            <TextBlock Margin="15" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Menu</TextBlock>
+            <Button Margin="10" FontSize="18" FontWeight="Bold" FontStyle="Italic" Click="Magazyn_Click">Magazyn</Button>
+            <Button Margin="10" FontSize="18" FontWeight="Bold" FontStyle="Italic">Aktualizacja</Button>
+            <Button Margin="10" FontSize="18" FontWeight="Bold" FontStyle="Italic">Raport</Button>
+            <Button Margin="10" FontSize="18" FontWeight="Bold" FontStyle="Italic" Click="Wyjście_Click">Wyjście</Button>
+        </StackPanel>
         <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
